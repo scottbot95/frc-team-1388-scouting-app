@@ -45,6 +45,13 @@ public abstract class Score extends Number {
 //		mScore = score;
 //	}
 	
+	/**
+	 * Add score of type <tt>type</tt> then return the current score. 
+	 * (eg Teleop.score(Teleop.Type.LOW) adds one to the score and then outputs
+	 * whatever the current score is.
+	 * @param type The type of score to add.
+	 * @return The new score
+	 */
 	public abstract int score(Enum<?> type);
 
 	@Override
