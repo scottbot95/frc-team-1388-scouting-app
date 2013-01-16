@@ -1,0 +1,70 @@
+package com.javaking.clanteam.scouting.scoring;
+
+
+/**
+ * The Score by one team for one phase of a match (auto, teleop)
+ * @author scott
+ *
+ */
+public abstract class Score extends Number {
+	
+	private static final long serialVersionUID = 4096532298254153554L;
+	
+	protected int mScore;
+	
+	public enum Type {
+		AUTONOMOUS,
+		TELEOP,
+		PYRAMAID
+	}
+	
+	public static Score getInstance(Type type) {
+		Score newScore;
+		switch (type) {
+		case AUTONOMOUS:
+			newScore= new PyramaidScore();
+			break;
+		case TELEOP:
+			newScore = new PyramaidScore();
+			break;
+		case PYRAMAID:
+			newScore = new PyramaidScore();
+			break;
+		default:
+			newScore = null;
+		}
+		return newScore;
+	}
+	
+//	public Score(MatchData.Period period) {
+//		mPeriod = period;
+//	}
+//	
+//	public Score(MatchData.Period period, int score) {
+//		mPeriod = period;
+//		mScore = score;
+//	}
+	
+	public abstract int score(Enum<?> type);
+
+	@Override
+	public double doubleValue() {
+		return mScore;
+	}
+
+	@Override
+	public float floatValue() {
+		return mScore;
+	}
+
+	@Override
+	public int intValue() {
+		return mScore;
+	}
+
+	@Override
+	public long longValue() {
+		return mScore;
+	}
+
+}
