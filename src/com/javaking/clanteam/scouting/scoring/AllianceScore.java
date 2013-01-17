@@ -12,6 +12,10 @@ import com.javaking.clanteam.scouting.matches.MatchHeaderData;
  */
 public class AllianceScore {
 	
+	private AllianceScore() {
+		mTeams = new TeamScore[3];
+	}
+	
 	public enum Alliance {
 		RED,
 		BLUE
@@ -67,21 +71,21 @@ public class AllianceScore {
 	/**
 	 * @return the mTeams
 	 */
-	public Score[] getmTeams() {
+	public TeamScore[] getmTeams() {
 		return mTeams;
 	}
 
 	/**
 	 * @param mTeams the mTeams to set
 	 */
-	public void setmTeams(Score[] mTeams) {
+	public void setmTeams(TeamScore[] mTeams) {
 		this.mTeams = mTeams;
 	}
 
 	/**
 	 * Scores of the individual teams on this alliance.
 	 */
-	private Score[] mTeams;
+	private TeamScore[] mTeams;
 	
 	/**
 	 * Grab the score stats from the FRC twiter feed.

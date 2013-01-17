@@ -22,13 +22,13 @@ public abstract class Score extends Number {
 		Score newScore;
 		switch (type) {
 		case AUTONOMOUS:
-			newScore= new PyramaidScore();
+			newScore= new PyramadScore();
 			break;
 		case TELEOP:
-			newScore = new PyramaidScore();
+			newScore = new PyramadScore();
 			break;
 		case PYRAMAID:
-			newScore = new PyramaidScore();
+			newScore = new PyramadScore();
 			break;
 		default:
 			newScore = null;

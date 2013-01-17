@@ -2,7 +2,7 @@ package com.javaking.clanteam.scouting.scoring;
 
 
 
-public class PyramaidScore extends Score {
+public class PyramadScore extends Score {
 
 	public enum Type {
 		DISK,
@@ -16,12 +16,12 @@ public class PyramaidScore extends Score {
 	@Override
 	public int score(Enum<?> type) {
 		if (!(type instanceof Type)) {
-			throw new IllegalArgumentException("type Must be of a PyramaidScore.Type enum");
+			throw new IllegalArgumentException("type Must be of a PyramadScore.Type enum");
 		}
 		if (type.name().equals(Type.DISK.name()))
-			return 5;
+			return (mScore+=5);
 		
-		return (type.ordinal()*10);
+		return (mScore+=type.ordinal()*10);
 	}
 
 }

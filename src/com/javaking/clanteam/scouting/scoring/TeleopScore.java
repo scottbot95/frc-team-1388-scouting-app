@@ -15,7 +15,7 @@ public class TeleopScore extends Score {
 		if (!(type instanceof Type)) {
 			throw new IllegalArgumentException("type Must be of a TeleopScore.Type enum");
 		}
-		return (type.ordinal()*2)+1; // Equivalant to (ordinal+1)*2 - 1, or every odd value
+		return mScore+=(type.ordinal()+1); 
 	}
 
 }

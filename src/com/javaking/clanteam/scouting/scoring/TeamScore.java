@@ -23,7 +23,7 @@ public class TeamScore {
 	private Score mTeleopScore;
 	
 	/**
-	 * The points scored via the Pyramaid
+	 * The points scored via the Pyramid
 	 */
 	private Score mPyramaidScore;
 	
@@ -36,8 +36,25 @@ public class TeamScore {
 		this.teamNumber = teamNumber;
 		mAutoScore = new AutonomousScore();
 		mTeleopScore = new TeleopScore();
-		mPyramaidScore = new PyramaidScore();
+		mPyramaidScore = new PyramadScore();
 		mPenalties = new Penalties();
+	}
+	
+	public Score score(Enum<?> type) {
+		Class<?> clazz = type.getClass().getEnclosingClass();
+		if (clazz==null) {
+			throw new IllegalArgumentException("Unknown enum");
+		}
+		if (clazz.equals(AutonomousScore.class)) 
+			mAutoScore.score(type);
+		else if (clazz.equals(TeleopScore.class)) 
+			mTeleopScore.score(type);
+		else if (clazz.equals(PyramadScore.class)) 
+			mAutoScore.score(type);
+		else if (clazz.equals(Penalties.class)) 
+				mAutoScore.score(type);
+		
+		return null;
 	}
 	
 	
