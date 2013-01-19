@@ -23,7 +23,7 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="com.javaking.clanteam.scouting.MatchEditActivity"
+			android:name="com.javaking.clanteam.scouting.matches.MatchEditActivity"
 			android:label="@string/title_activity_match_edit" >
 		</activity>
 	</application>

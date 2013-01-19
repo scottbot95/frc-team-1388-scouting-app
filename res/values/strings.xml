@@ -6,5 +6,8 @@
 	<string name="menu_settings">Settings</string>
 	<string name="title_activity_match_edit">Match Edit</string>
 	<string name="teamNumLabel">Team Number:</string>
+	<string name="regionalLabel">Regional:</string>
+	<string name="matchNumLabel">Match Number:</string>
+	<string name="startMatchLabel">Start Match</string>
 
 </resources>

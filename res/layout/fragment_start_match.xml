@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MatchEditActivity" xmlns:app="http://schemas.android.com/apk/res/com.javaking.clanteam.scouting">
+
+    <EditText
+    	android:id="@+id/teamNumberEdit"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentTop="true"
+    	android:layout_toRightOf="@+id/textView1"
+    	android:ems="10"
+    	android:hint="@string/teamNumLabel"
+    	android:inputType="number" >
+
+    	<requestFocus />
+    </EditText>
+
+    <TextView
+    	android:id="@+id/textView1"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignBaseline="@+id/teamNumberEdit"
+    	android:layout_alignBottom="@+id/teamNumberEdit"
+    	android:layout_alignParentLeft="true"
+    	android:text="@string/teamNumLabel"
+    	android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.javaking.clanteam.views.HorizontalDivider
+    	android:id="@+id/horizontalDivider1"
+    	android:layout_width="wrap_content"
+    	android:layout_height="1dp"
+    	android:layout_below="@+id/teamNumberEdit"
+    	android:layout_centerHorizontal="true"
+    	android:layout_marginBottom="20dp"
+    	android:layout_marginTop="20dp"
+    	app:color="@color/divider_color_main" />
+
+    <TextView
+    	android:id="@+id/textView2"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentLeft="true"
+    	android:layout_below="@+id/horizontalDivider1"
+    	android:text="@string/regionalLabel"
+    	android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+    	android:id="@+id/regionalCodeEdit"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignBaseline="@+id/textView2"
+    	android:layout_alignBottom="@+id/textView2"
+    	android:layout_alignLeft="@+id/teamNumberEdit"
+    	android:ems="10"
+    	android:hint="@string/regionalLabel"
+    	android:inputType="textCapWords" />
+
+    <TextView
+    	android:id="@+id/textView3"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentLeft="true"
+    	android:layout_below="@+id/regionalCodeEdit"
+    	android:layout_marginTop="20dp"
+    	android:text="@string/matchNumLabel"
+    	android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+    	android:id="@+id/matchNumEdit"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignBaseline="@+id/textView3"
+    	android:layout_alignBottom="@+id/textView3"
+    	android:layout_alignLeft="@+id/regionalCodeEdit"
+    	android:ems="10"
+    	android:hint="@string/matchNumLabel"
+    	android:inputType="number" />
+
+    <Button
+    	android:id="@+id/startMatchButton"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@+id/matchNumEdit"
+    	android:layout_centerHorizontal="true"
+    	android:layout_marginTop="40dp"
+    	android:onClick="startMatch"
+    	android:text="@string/startMatchLabel"
+    	android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
