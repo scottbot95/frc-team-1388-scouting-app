@@ -1,6 +1,7 @@
 package com.javaking.clanteam.scouting.matches;
 
 import com.javaking.clanteam.scouting.TeamData;
+import com.javaking.clanteam.scouting.scoring.AllianceScore;
 
 /**
  * All the data about a match bundled into one nice happy class.
@@ -19,19 +20,20 @@ public class MatchData {
 	private MatchHeaderData mHeaderData;
 	
 	/**
-	 * An array of all the teams in this match
+	 * An array of all the team numbers in this match
+	 * The first three are the blue alliance, the last three are the red.
 	 */
 	private int[] mTeams;
 
 	/**
 	 * The final score of Red Alliance
 	 */
-	private int mRedScore;
+	private AllianceScore mRedScore;
 	
 	/**
 	 * The final score of Blue Alliance
 	 */
-	private int mBlueScore;
+	private AllianceScore mBlueScore;
 	
 	private MatchData()
 	{

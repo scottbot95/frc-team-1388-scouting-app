@@ -25,7 +25,7 @@ public class AllianceScore {
 	 * The final score of one alliance not adjusted for points due to penalties from
 	 * the other alliance.
 	 */
-	private int mNominalFinalScore = 0;
+	private int mNominalScore = 0;
 	
 	/**
 	 * Not to be related to Nominal and Final Scores, this is the points for the
@@ -34,52 +34,31 @@ public class AllianceScore {
 	private int mPenalties = 0;
 	
 	/**
-	 * @return the mNominalFinalScore
+	 * @return the NominalScore (the raw points scored by the alliance.)
 	 */
-	public int getmNominalFinalScore() {
-		return mNominalFinalScore;
+	public int getNominalScore() {
+		return mNominalScore;
 	}
 
 	/**
-	 * @param mNominalFinalScore the mNominalFinalScore to set
+	 * @return the RealScore (adjusted for penalties)
 	 */
-	public void setmNominalFinalScore(int mNominalFinalScore) {
-		this.mNominalFinalScore = mNominalFinalScore;
+	public int getRealScore() {
+		return mNominalScore-mPenalties;
 	}
 
 	/**
-	 * @return the mRealFinalScore
+	 * @return the Penalties
 	 */
-	public int getmRealFinalScore() {
-		return mNominalFinalScore-mPenalties;
-	}
-
-	/**
-	 * @return the mPenalties
-	 */
-	public int getmPenalties() {
+	public int getPenalties() {
 		return mPenalties;
 	}
 
 	/**
-	 * @param mPenalties the mPenalties to set
+	 * @return the Teams
 	 */
-	public void setmPenalties(int mPenalties) {
-		this.mPenalties = mPenalties;
-	}
-
-	/**
-	 * @return the mTeams
-	 */
-	public TeamScore[] getmTeams() {
+	public TeamScore[] getTeams() {
 		return mTeams;
-	}
-
-	/**
-	 * @param mTeams the mTeams to set
-	 */
-	public void setmTeams(TeamScore[] mTeams) {
-		this.mTeams = mTeams;
 	}
 
 	/**

@@ -2,7 +2,7 @@ package com.javaking.clanteam.scouting.scoring;
 
 
 
-public class PyramadScore extends Score {
+public class PyramidScore extends Score {
 
 	public enum Type {
 		DISK,
