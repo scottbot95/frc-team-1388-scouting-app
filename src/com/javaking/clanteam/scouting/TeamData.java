@@ -32,9 +32,25 @@ public class TeamData {
 	 * The "score" this team has received thus far based on the matches it has
 	 * performed in.
 	 */
+	@SuppressWarnings("unused")
 	private float mScore; // TODO Do we really want this here?
 	
 	
+	public int getmTeamNumber() {
+		return mTeamNumber;
+	}
+
+
+	public String getmTeamName() {
+		return mTeamName;
+	}
+
+
+	public List<MatchData> getmMatches() {
+		return mMatches;
+	}
+
+
 	public static TeamData getTeam(int number) {
 		throw new UnsupportedOperationException("Method not yet implemented.");
 	}

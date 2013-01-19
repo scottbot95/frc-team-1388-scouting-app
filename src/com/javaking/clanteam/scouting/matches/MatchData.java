@@ -35,6 +35,18 @@ public class MatchData {
 	 */
 	private AllianceScore mBlueScore;
 	
+	public MatchHeaderData getHeaderData() {
+		return mHeaderData;
+	}
+
+	public AllianceScore getRedScore() {
+		return mRedScore;
+	}
+
+	public AllianceScore getBlueScore() {
+		return mBlueScore;
+	}
+
 	private MatchData()
 	{
 		mTeams = new int[6];
