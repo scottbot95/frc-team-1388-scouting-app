@@ -18,7 +18,7 @@ public class StartMatchFragment extends SherlockFragment {
 			
 			@Override
 			public void onClick(View v) {
-				getFragmentManager()
+				getSherlockActivity().getSupportFragmentManager()
 					.beginTransaction()
 					.replace(getId(), new PlayMatchFragment())
 					.addToBackStack(null)
