@@ -13,7 +13,19 @@ public class StartMatchFragment extends SherlockFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.fragment_start_match, container,false);
+		View view = inflater.inflate(R.layout.fragment_start_match, container,false);
+		view.findViewById(R.id.startMatchButton).setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				getFragmentManager()
+					.beginTransaction()
+					.replace(getId(), new PlayMatchFragment())
+					.addToBackStack(null)
+					.commit();
+			}
+		});
+		return view;
 	}
 
 }

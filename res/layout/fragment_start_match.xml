@@ -2,7 +2,7 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context=".MatchEditActivity" xmlns:app="http://schemas.android.com/apk/res/com.javaking.clanteam.scouting">
+	xmlns:app="http://schemas.android.com/apk/res/com.javaking.clanteam.scouting">
 
     <EditText
     	android:id="@+id/teamNumberEdit"
@@ -85,7 +85,6 @@
     	android:layout_below="@+id/matchNumEdit"
     	android:layout_centerHorizontal="true"
     	android:layout_marginTop="40dp"
-    	android:onClick="startMatch"
     	android:text="@string/startMatchLabel"
     	android:textAppearance="?android:attr/textAppearanceLarge" />
 

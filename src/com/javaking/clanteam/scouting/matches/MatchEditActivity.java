@@ -12,6 +12,9 @@ public class MatchEditActivity extends SherlockFragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_match_edit);
+		getSupportFragmentManager().beginTransaction()
+			.add(R.id.frame, new StartMatchFragment())
+			.commit();
 	}
 
 	@Override

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/com.javaking.clanteam.scouting"
+	android:id="@+id/RelativeLayout1"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+
+	<TextView
+		android:id="@+id/textView3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@id/matchNum"
+		android:layout_alignParentLeft="true"
+		android:text="@string/matchNumLabel"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<TextView
+		android:id="@+id/textView1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/teamNumber"
+		android:layout_alignBottom="@+id/teamNumber"
+		android:layout_alignParentLeft="true"
+		android:text="@string/teamNumLabel"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<EditText
+		android:id="@+id/matchNum"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@id/teamNumber"
+		android:layout_below="@+id/teamNumber"
+		android:ems="10"
+		android:focusable="false"
+		android:focusableInTouchMode="false"
+		android:inputType="number" />
+
+	<com.javaking.clanteam.views.HorizontalDivider
+		android:id="@+id/horizontalDivider1"
+		android:layout_width="wrap_content"
+		android:layout_height="2dp"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/matchNum"
+		android:layout_marginTop="20dp"
+		app:color="@color/divider_color_main" />
+
+	<TextView
+		android:id="@+id/textView2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/horizontalDivider1"
+		android:layout_marginTop="20dp"
+		android:text="@string/autoScoreLabel"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<EditText
+		android:id="@+id/teamNumber"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_toRightOf="@+id/textView2"
+		android:ems="10"
+		android:focusable="false"
+		android:focusableInTouchMode="false"
+		android:inputType="number" >
+
+		<requestFocus />
+	</EditText>
+
+	<Button
+		android:id="@+id/button1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/textView2"
+		android:layout_alignBottom="@+id/textView2"
+		android:layout_marginLeft="10dp"
+		android:layout_toRightOf="@+id/textView2"
+		android:text="@string/scoreLow" />
+
+	<Button
+		android:id="@+id/Button01"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/button1"
+		android:layout_alignBottom="@+id/button1"
+		android:layout_marginLeft="10dp"
+		android:layout_toRightOf="@+id/button1"
+		android:text="@string/scoreMed" />
+
+	<Button
+		android:id="@+id/Button02"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/Button01"
+		android:layout_alignBottom="@+id/Button01"
+		android:layout_marginLeft="10dp"
+		android:layout_toRightOf="@+id/Button01"
+		android:text="@string/scoreHigh" />
+
+	<Button
+		android:id="@+id/Button03"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/button2"
+		android:layout_alignBottom="@+id/button2"
+		android:layout_toRightOf="@+id/button2"
+		android:text="@string/scoreMed" />
+
+	<Button
+		android:id="@+id/Button04"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/Button03"
+		android:layout_alignBottom="@+id/Button03"
+		android:layout_toRightOf="@+id/Button03"
+		android:text="@string/scoreHigh" />
+
+	<TextView
+		android:id="@+id/textView4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/button2"
+		android:layout_alignBottom="@+id/button2"
+		android:layout_alignParentLeft="true"
+		android:text="@string/teleopScore"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<Button
+		android:id="@+id/button2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/button1"
+		android:layout_marginTop="20dp"
+		android:layout_toRightOf="@+id/textView1"
+		android:text="@string/scoreLow" />
+
+	<Button
+		android:id="@+id/Button05"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/Button04"
+		android:layout_alignBottom="@+id/Button04"
+		android:layout_toRightOf="@+id/Button04"
+		android:text="@string/pyramid" />
+
+	<TextView
+		android:id="@+id/textView5"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@+id/seekBar1"
+		android:layout_alignParentLeft="true"
+		android:text="@string/pyramidLabel"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	<SeekBar
+		android:id="@+id/seekBar1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/Button05"
+		android:layout_marginTop="10dp"
+		android:layout_toRightOf="@id/textView5"
+		android:max="4" />
+
+</RelativeLayout>

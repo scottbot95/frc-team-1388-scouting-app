@@ -9,5 +9,16 @@
 	<string name="regionalLabel">Regional:</string>
 	<string name="matchNumLabel">Match Number:</string>
 	<string name="startMatchLabel">Start Match</string>
+	<string name="autoScoreLabel">Autonomous Score</string>
+	<string name="scoreLow">Score Low</string>
+	<string name="scoreMed">Score Medium</string>
+	<string name="scoreHigh">Score High</string>
+	<string name="teleopScore">Teleop Score</string>
+	<string name="pyramid">Pyramid</string>
+	<string name="level0">Level 0</string>
+	<string name="level1">Level 1</string>
+	<string name="level2">Level 2</string>
+	<string name="level3">Level 3</string>
+	<string name="pyramidLabel">Pyramid Score</string>
 
 </resources>
